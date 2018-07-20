@@ -1,0 +1,26 @@
+CACHE MANIFEST
+# version 0.0.4 ih
+# manifest 文件的 MIME 类型必须
+# text/cache-manifest
+
+CACHE:
+eventTest.js
+
+http://www.scau.edu.cn/_css/tpl2/default/default.css
+http://172.21.223.13:3000/main.css
+https://www.w3.org/TR/2011/WD-html5-20110525/style.css
+https://www.w3.org/Icons/w3c_home
+http://172.21.223.13:3000/img.jpg
+http://www.scau.edu.cn/_upload/tpl/00/4e/78/template78/images/scau_18.png
+https://www.w3.org/TR/2011/WD-html5-20110525/link-fixup.js
+http://www.scau.edu.cn/_js/_portletPlugs/datepicker/js/datepicker_lang_HK.js
+http://172.21.223.13:3000/fun.js
+
+# 走网络，不进行缓存
+# 载有 manifest 的 html 文件不会被缓存
+NETWORK:
+*
+
+# 两个参数值
+# 一个表示资源，一个表示后备页面
+FALLBACK:
