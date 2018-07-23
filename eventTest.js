@@ -9,6 +9,10 @@ window.applicationCache.onnoupdate = function () {
     alert('noupdate')
 }
 
+window.applicationCache.onprogress = function (event) {
+    alert(event.loaded + '-' + event.total);
+}
+
 window.applicationCache.ondownloading = function () {
     alert('download')
 }
