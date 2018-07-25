@@ -9,8 +9,13 @@ window.applicationCache.onnoupdate = function () {
     alert('noupdate')
 }
 
-window.applicationCache.onprogress = function (event) {
-    alert(event.loaded + '-' + event.total);
+
+var progress = true;
+window.applicationCache.onprogress = function () {  
+    if (progress) {
+        alert(event.loaded + '-' + event.total);
+        progress = false;
+    }
 }
 
 window.applicationCache.ondownloading = function () {
@@ -22,31 +27,7 @@ window.applicationCache.oncached = function() {
     alert('oncached');
 }
 
-window.applicationCache.onupdateready = function() {
-    alert('ready');
-}
 
-// window.applicationCache.ondownloading = function() {
-//     console.log('download')
-//     alert('download')
-// }
-
-// window.applicationCache.onprogress =  function() {
-//     console.log('progress');
-//     alert('progress')
-// }
-
-
-
-// setTimeout(function() {
-//     window.applicationCache.update();
-// }, 3000);
-
-// function onNoUpdate() {
-// alert('noupdate ~~~');
-// }
-
-// window.applicationCache.onnoupdate = onNoUpdate;
 
 window.applicationCache.onobsolete = function() {
     alert('onobsolete now');
